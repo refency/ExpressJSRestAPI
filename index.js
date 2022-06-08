@@ -25,7 +25,7 @@ app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 async function startApp() {
     try {
-        // await mongoose.connect(process.env.DB_URL)
+        await mongoose.connect(process.env.DB_URL)
 
         app.listen(PORT, () => console.log('SERVER STARTED ON PORT: ' + PORT))
     } catch (err) {
